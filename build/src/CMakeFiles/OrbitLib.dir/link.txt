@@ -1,0 +1,2 @@
+/usr/bin/ar qc libOrbitLib.a CMakeFiles/OrbitLib.dir/KepToRV.cpp.o CMakeFiles/OrbitLib.dir/RVToKep.cpp.o
+/usr/bin/ranlib libOrbitLib.a
