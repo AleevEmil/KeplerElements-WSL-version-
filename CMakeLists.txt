@@ -12,4 +12,4 @@ find_package(Eigen3 REQUIRED)
 add_subdirectory(src)
 
 add_executable(orbit_test tests/main.cpp)
-target_link_libraries(orbit_test PRIVATE ${PROJECT_NAME})
+target_link_libraries(orbit_test PRIVATE ${KeplerElements})

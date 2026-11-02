@@ -1,6 +1,0 @@
-/home/aleevemil/Кружок по интересам/KeplerElements2/build/CMakeFiles/orbit_test.dir
-/home/aleevemil/Кружок по интересам/KeplerElements2/build/CMakeFiles/edit_cache.dir
-/home/aleevemil/Кружок по интересам/KeplerElements2/build/CMakeFiles/rebuild_cache.dir
-/home/aleevemil/Кружок по интересам/KeplerElements2/build/src/CMakeFiles/OrbitLib.dir
-/home/aleevemil/Кружок по интересам/KeplerElements2/build/src/CMakeFiles/edit_cache.dir
-/home/aleevemil/Кружок по интересам/KeplerElements2/build/src/CMakeFiles/rebuild_cache.dir
