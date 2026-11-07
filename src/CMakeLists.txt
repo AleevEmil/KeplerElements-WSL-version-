@@ -1,4 +1,4 @@
-add_library(${KeplerElements} STATIC 
+add_library(${PROJECT_NAME} STATIC 
     KepToRV.cpp 
     KepToRV.hpp 
     RVToKep.cpp 
@@ -10,5 +10,7 @@ add_library(${KeplerElements} STATIC
     OrbitPredict.hpp
 )
 
-target_link_libraries(${KeplerElements} PUBLIC Eigen3::Eigen)
-target_include_directories(${KeplerElements} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
+
+target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen)
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
