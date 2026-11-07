@@ -7,7 +7,6 @@ double solveKeplerNewton(double M, double e) {
 
     double E = (M > M_PI) ? (M - e) : (M + e);  // начальное приближение
 
-    const double tolerance = 1e-12;
     const int max_iterations = 100;
 
     for (int i = 0; i < max_iterations; ++i) {
@@ -17,9 +16,6 @@ double solveKeplerNewton(double M, double e) {
         double delta = f / df;
         E -= delta;
 
-        if (std::abs(delta) < tolerance) {
-            return E;
-        }
     }
     return E;
 }
