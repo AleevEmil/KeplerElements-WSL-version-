@@ -19,7 +19,7 @@ double solveKeplerNewton(double M, double e) {
         double delta = f / df;
 
         if (std::abs(delta) < 100 * std::numeric_limits<double>::epsilon()) {
-            return E - delta;
+            return (E - delta);
         }
 
         E -= delta;

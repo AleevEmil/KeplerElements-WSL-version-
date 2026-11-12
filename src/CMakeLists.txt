@@ -10,6 +10,10 @@ add_library(${PROJECT_NAME} STATIC
     OrbitPredict.hpp
 )
 
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    add_compile_options(-Wall -Wextra -Wpedantic -Werror -g)
+endif()
+
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen)
