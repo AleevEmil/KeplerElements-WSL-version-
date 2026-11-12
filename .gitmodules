@@ -1,0 +1,6 @@
+[submodule "KeplerElements2/nanobind"]
+	path = KeplerElements2/nanobind
+	url = https://github.com/wjakob/nanobind
+[submodule "nanobind"]
+	path = nanobind
+	url = https://github.com/wjakob/nanobind
