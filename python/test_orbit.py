@@ -4,7 +4,7 @@ import orbit_py
 mu = 398600.4418  # км^3/с^2
 
 r0 = np.array([7000.0, 0.0, 0.0])
-v0 = np.array([0.0, np.sqrt(mu / 7000.0), 0.0])
+v0 = np.array([0.0, np.sqrt(mu / 7000.0), 0.0])             #первая космическая)) 
 T = 2.0 * np.pi * np.sqrt(7000.0**3 / mu)
 
 r1, v1 = orbit_py.predict_orbit(r0, v0, T, mu)

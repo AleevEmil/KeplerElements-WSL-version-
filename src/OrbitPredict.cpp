@@ -6,7 +6,7 @@
 
 std::tuple<Vector_3D, Vector_3D> predictOrbit(const Vector_3D& r0, const Vector_3D& v0, double dt, double mu) {
 
-    KeplerElements kep = RVToKeplerov(r0, v0, mu);
+    KeplerElements kep = RVToKepler(r0, v0, mu);
 
     // nu0 -> E0
     const double sqrt_1_e2 = std::sqrt(1.0 - kep.e * kep.e);
@@ -32,5 +32,5 @@ std::tuple<Vector_3D, Vector_3D> predictOrbit(const Vector_3D& r0, const Vector_
     const double cos_nu = (std::cos(E) - kep.e) / denom_E;
     kep.nu = std::atan2(sin_nu, cos_nu);
 
-    return KeperovToRV(kep, mu);
+    return KeplerToRV(kep, mu);
 }

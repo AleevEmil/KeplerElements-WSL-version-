@@ -7,12 +7,12 @@ project(OrbitLib)
 # Ищем Python
 find_package(Python 3.8 COMPONENTS Interpreter Development.Module REQUIRED)
 
-# Подключаем локальную папку nanobind
+# Подключаем nanobind
 add_subdirectory(nanobind)
 
 find_package(Eigen3 REQUIRED)
 
-# Собираем вашу библиотеку и тесты
+# Собираем библиотеку и тесты
 add_subdirectory(src)
 add_subdirectory(tests)
 

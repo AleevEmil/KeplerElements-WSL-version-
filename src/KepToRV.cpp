@@ -1,7 +1,7 @@
 #include <KepToRV.hpp>
 #include <cmath>
 
-std::tuple<Vector_3D, Vector_3D> KeperovToRV(const KeplerElements& kep, const double mu) {
+std::tuple<Vector_3D, Vector_3D> KeplerToRV(const KeplerElements& kep, const double mu) {
     const double cos_nu = std::cos(kep.nu);
     const double sin_nu = std::sin(kep.nu);
 

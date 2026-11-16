@@ -1,7 +1,7 @@
 #include <RVToKep.hpp>
 #include <cmath>
 
-KeplerElements RVToKeplerov(const Vector_3D& r, const Vector_3D& v, const double mu) {
+KeplerElements RVToKepler(const Vector_3D& r, const Vector_3D& v, const double mu) {
     const double r_cmas = r.norm();
     const double v_mag = v.norm();
 

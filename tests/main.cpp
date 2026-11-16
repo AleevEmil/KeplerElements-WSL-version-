@@ -14,13 +14,13 @@ int main() {
     kep0.w    = 0.3;      // рад
     kep0.nu   = 0.7854;   // рад
 
-    auto [r, v] = KeperovToRV(kep0, mu);
+    auto [r, v] = KeplerToRV(kep0, mu);
 
     std::cout << "--- kep -> (r, v) ---\n";
     std::cout << "r = [" << r(0) << ", " << r(1) << ", " << r(2) << "]\n";
     std::cout << "v = [" << v(0) << ", " << v(1) << ", " << v(2) << "]\n\n";
 
-    KeplerElements kep1 = RVToKeplerov(r, v, mu);
+    KeplerElements kep1 = RVToKepler(r, v, mu);
 
     std::cout << "--- (r, v) -> kep ---\n";
     std::cout << "a    = " << kep1.a    << "  (было " << kep0.a    << ")\n";
@@ -31,7 +31,7 @@ int main() {
     std::cout << "nu   = " << kep1.nu   << "  (было " << kep0.nu   << ")\n\n";
 
     // проверка: повторный переход должен вернуть те же r, v
-    auto [r2, v2] = KeperovToRV(kep1, mu);
+    auto [r2, v2] = KeplerToRV(kep1, mu);
     std::cout << "|r2 - r| = " << (r2 - r).norm() << "\n";
     std::cout << "|v2 - v| = " << (v2 - v).norm() << "\n";
 

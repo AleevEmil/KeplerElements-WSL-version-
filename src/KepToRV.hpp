@@ -2,4 +2,4 @@
 #include <tuple>
 #include <KeplerElements.hpp>
 
-std::tuple<Vector_3D, Vector_3D> KeperovToRV(const KeplerElements& kep, const double mu);
+std::tuple<Vector_3D, Vector_3D> KeplerToRV(const KeplerElements& kep, const double mu);
